@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>webapp/usertag.html</title>
+<meta charset='utf-8'/>
+<style>
+	company {
+		color: red; display:block;	
+	}
+	company>department {
+	background: yellow;
+	}
+	company[term]{
+	font-size: 25px;
+	}
+</style>
+</head>
+
+<BODY>
+	<company term="10">한빛아카데미
+		<department>영업부</department>
+		<department>편집부
+			<team>그래픽팀</team>
+		</department>
+	</company>
+	<company>한국대학교
+	<department>영문과</department>
+	<department>역사학과</department>
+	<department>1학년</department>
+	<department>영문과</department>
+	</company>
+	<img src="pinkmully.png">
+	<script>
+	let dept = document.getElementsByTagName('department');
+	dept[0].childNodes[0].nodeValue = "Sales";
+	
+	</script>
+</BODY>
+</html>
